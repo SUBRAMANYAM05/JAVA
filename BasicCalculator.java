@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class BasicCalculator {
+    double num1,num2;
+    public BasicCalculator(double num1,double num2){
+this.num1=num1;
+this.num2=num2;
+    }
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number to be calculated:");
+        double num1 = sc.nextDouble();
+        double num2 = sc.nextDouble();
+        System.out.println("enter the operator(+,-,/,*,%)");
+        BasicCalculator calc=new BasicCalculator(num1,num2);
+        double result;
+        char op=sc.next().charAt(0);
+        switch(op)
+        {
+            case '+':{
+                result=num1+num2;
+                System.out.println("the result:"+result);
+                break;
+            }
+            case '-':{
+                result=num1-num2;
+                System.out.println("the result:"+result);
+                break;
+            }
+            default:
+                {
+                    System.out.println("invalid operator");
+                    break;
+                }
+        }
+    }
+}
+          
