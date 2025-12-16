@@ -8,8 +8,9 @@ this.num2=num2;
     public static void main(String[]args)
     {
         Scanner sc=new Scanner(System.in);
-        System.out.println("enter the number to be calculated:");
+        System.out.println("enter the first number:");
         double num1 = sc.nextDouble();
+        System.out.println("enter the second number:");
         double num2 = sc.nextDouble();
         System.out.println("enter the operator(+,-,/,*,%)");
         BasicCalculator calc=new BasicCalculator(num1,num2);
@@ -19,12 +20,27 @@ this.num2=num2;
         {
             case '+':{
                 result=num1+num2;
-                System.out.println("the result:"+result);
+                System.out.println("Addition:"+result);
                 break;
             }
             case '-':{
                 result=num1-num2;
-                System.out.println("the result:"+result);
+                System.out.println("Subtraction:"+result);
+                break;
+            }
+            case '/':{
+                result=num1/num2;
+                System.out.println("division:"+result);
+                break;
+            }
+            case '*':{
+                result=num1*num2;
+                System.out.println("multiplication:"+result);
+                break;
+            }
+            case '%':{
+                result=num1%num2;
+                System.out.println("Modulus operator:"+result);
                 break;
             }
             default:
